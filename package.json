@@ -1,0 +1,27 @@
+{
+  "name": "used-clothes-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahwaZeslusHaile/used-clothes-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RahwaZeslusHaile/used-clothes-project/issues"
+  },
+  "homepage": "https://github.com/RahwaZeslusHaile/used-clothes-project#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1",
+    "nodemon": "^3.1.11"
+  }
+}
