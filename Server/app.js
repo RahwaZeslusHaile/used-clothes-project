@@ -2,12 +2,14 @@ const  express=require('express');
 require('dotenv').config();
 const app=express();
 
-const port=process.env.PORT || 5000
 
-app.listen(port,()=>{
+const PORT = process.env.PORT || 5000;
 
-console.log(`server is running on port ${process.env.PORT}` )
+
+app.listen(PORT,()=>{
+
+console.log(`server is running on port ${PORT}` )
 })
-  console.log(port)
+app.use(express.json());
 
 module.exports=app;

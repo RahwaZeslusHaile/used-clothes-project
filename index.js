@@ -1,18 +1,10 @@
+require ('./Server/app');
 require('dotenv').config();
-require('./Server/app');
-const mongoose= require('mongoose');
+const mongoose = require('mongoose');
 
-const dev_uri=process.env.MONGODB_DEV;
-const test_uri=process.env.MONGODB_TEST;
+const uri = process.env.NODE_ENV === 'test' ? process.env.MONGODB_TEST : process.env.MONGODB_DEV;
 
-mongoose.connect(test_uri).then(()=>{
+mongoose.connect(uri)
+  .then(() => console.log(' Connected to MongoDB'))
+  .catch(err => console.log(' MongoDB connection error', err.message));
 
-console.log('Database connected Successfully')
-}).catch( (err)=>{
-
-console.log("error connecting to database", err.message)
-
-    })
-
-        
-    
