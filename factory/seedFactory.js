@@ -1,6 +1,5 @@
-const { faker } = require("@faker-js/faker");
-
-const userFactory = () => {
+import { faker } from "@faker-js/faker";
+export const userFactory = () => {
   return {
     firstName: faker.person.firstName(),
     lastName: faker.person.lastName(),
@@ -8,7 +7,7 @@ const userFactory = () => {
   };
 };
 
-const seedUser = async (count = 5) => {
+export const seedUser = async (count = 5) => {
   const users = [];
 
   for (let i = 0; i < count; i++) {
@@ -17,5 +16,3 @@ const seedUser = async (count = 5) => {
 
   return users;
 };
-
-module.exports = { userFactory, seedUser };
