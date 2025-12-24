@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "dev": "nodemon index.js",
     "seed:user": "node seeds/seedUsers.js"
   },
@@ -12,7 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/RahwaZeslusHaile/used-clothes-project.git"
   },
-  
   "type": "module",
   "keywords": [],
   "author": "",
@@ -30,6 +29,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^10.1.0",
+    "cross-env": "^10.1.0",
     "mongodb-memory-server": "^11.0.0"
   }
 }
