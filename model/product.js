@@ -1,3 +1,4 @@
+import { en } from "@faker-js/faker";
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema(
@@ -27,6 +28,7 @@ const productSchema = new mongoose.Schema(
 
     category: {
       type: String,
+      enum: ["men", "women", "kids"],
       required: true,
     },
 
