@@ -11,7 +11,7 @@ export const productFactory = (sellerId) => {
       "good",
       "fair",
     ]),
-    category: faker.commerce.department(),
+    category: faker.helpers.arrayElement(["men", "women", "kids"]),
     size: faker.helpers.arrayElement(["XS", "S", "M", "L", "XL"]),
     brand: faker.company.name(),
     images: [faker.image.url()],
